@@ -1,0 +1,25 @@
+# 1. Entornos virtuales (¡SÚPER IMPORTANTE!)
+# Evita subir gigabytes de librerías instaladas
+.venv/
+venv/
+ENV/
+env/
+
+# 2. Archivos pesados o datasets de datos grandes (como un CSV de más de 100 MB)
+#*.zip
+#*.rar
+
+# 3. Archivos temporales y de caché de Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 4. Archivos de configuración local y credenciales/tokens
+.env
+*.log
+.vscode/
+.idea/
+
+# 5. Archivos temporales del sistema operativo
+.DS_Store
+Thumbs.db
