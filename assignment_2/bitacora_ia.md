@@ -6,7 +6,6 @@ Utilicé IA (Claude) principalmente para entender las funciones y qué pedía la
 
 ## Karen Macedo
 Utilicé IA (Claude) como apoyo para entender los pasos del cruce: por qué el ubigeo debe leerse como texto, cómo hacer el merge por ubigeo y cómo armar los gráficos. Revisé los resultados y las respuestas antes de subirlos.
-
 ### Entrada – Parte 3
 1. Le pedí a la IA un código para verificar los conteos de `decretos_por_departamento.csv` antes del cruce.
 2. Me indicó usar `explode()` y luego `pd.crosstab()`.
