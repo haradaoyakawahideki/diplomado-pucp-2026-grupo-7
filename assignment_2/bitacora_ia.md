@@ -26,3 +26,18 @@ Al revisar con mayor detalle el archivo, se observó que ese `Crawl-delay: 5` co
 
 4. **¿Cómo se corrigió?**  
 Se corrigió la interpretación indicando que `/busquedas` no aparece entre las rutas prohibidas para `User-agent: *`. Aun así, se mantuvieron pausas entre solicitudes como una práctica responsable para evitar sobrecargar el servidor.
+## Vilma Barrios
+
+### Entrada – Parte 2: API de lluvias
+
+1. **¿Qué se le pidió a la IA?**  
+Se solicitó ayuda para resolver un error de `pd.read_html()` que indicaba que no se encontraba disponible la librería `lxml`.
+
+2. **¿Qué respondió la IA?**  
+Inicialmente recomendó ejecutar `pip install lxml` desde la terminal.
+
+3. **¿Qué estaba mal o incompleto?**  
+La instalación se estaba realizando en Python 3.11, mientras que el notebook estaba ejecutándose con el kernel Python 3.14.6. Por ello, instalar el paquete desde esa terminal no garantizaba que estuviera disponible en el entorno utilizado por el notebook.
+
+4. **¿Cómo se detectó y corrigió?**  
+Se identificó la diferencia al observar que la instalación correspondía a Python 3.11, mientras VS Code mostraba que el notebook utilizaba Python 3.14.6. Se corrigió ejecutando `%pip install lxml` dentro del propio notebook, asegurando que el paquete quedara disponible en el entorno del kernel activo. Después se reinició el kernel y se ejecutó nuevamente todo el notebook, completándose sin errores.
