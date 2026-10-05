@@ -17,6 +17,7 @@ requests==2.34.2            # pedir páginas sin navegador
 # --- Manejo de datos --------------------------------------------------------
 pandas==2.3.3               # read_html y el DataFrame final
 openpyxl==3.1.5             # exportar a Excel
+kaleido==1.4.0
 
 # --- Notebook ---------------------------------------------------------------
 jupyterlab>=4
