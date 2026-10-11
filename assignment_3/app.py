@@ -54,14 +54,6 @@ h2, h3 {
 </style>
 """, unsafe_allow_html=True)
 
-st.markdown("""
-### ¿El Estado declara emergencia donde más llueve?
-
-Este dashboard analiza la relación entre la **lluvia acumulada** y las
-**declaratorias de emergencia** registradas en los departamentos del Perú
-durante enero–mayo de 2024.
-""")
-
 
 BASE = Path(__file__).resolve().parent
 RUTA_DATOS = BASE / "datos" / "dataset.csv"
@@ -127,7 +119,9 @@ c4.metric(
     "📄 Prórrogas",
     int(f["prorrogas"].sum()) if len(f) else 0
 )
-
+if len(f) >= 3:
+    r = f["lluvia_total_mm"].corr(f["declaratorias"])
+    st.caption(f"📈 Correlación lluvia–declaratorias en la selección: r = {r:.2f}")
 if f.empty:
     st.warning("No hay datos para los filtros seleccionados.")
     st.stop()
