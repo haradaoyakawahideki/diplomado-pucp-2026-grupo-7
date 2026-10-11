@@ -8,6 +8,11 @@
 ### Datos
 Se reutiliza la **Opción B – Assignment 2 (Emergencias y lluvias)**. El archivo `datos/dataset.csv` corresponde a la tabla final construida por el Grupo 7 en el Assignment 2.
 
+Fuentes originales:
+- Lluvia acumulada y días de lluvia fuerte: API de Open-Meteo (capitales departamentales).
+- Declaratorias y prórrogas de emergencia: decretos supremos publicados por la PCM en gob.pe.
+- Geometrías: `distritos.geojson` del material de las sesiones 7/8 del curso.
+
 ### Hallazgos
 1. Los departamentos con mayor lluvia acumulada no coinciden necesariamente con los que registran el máximo número de declaratorias.
 2. La relación entre lluvia acumulada y declaratorias es débil, por lo que la lluvia por sí sola no explica el patrón observado.
@@ -18,7 +23,7 @@ Se reutiliza la **Opción B – Assignment 2 (Emergencias y lluvias)**. El archi
 - El análisis es descriptivo; correlación no implica causalidad.
 
 ### Dashboard público
-**Enlace:** PENDIENTE – reemplazar luego del despliegue en Streamlit Community Cloud.
+**Enlace:** https://lluvias-emergencias-grupo7.streamlit.app
 
 ### Ejecución local
 ```bash
