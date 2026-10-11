@@ -119,9 +119,9 @@ c4.metric(
     "📄 Prórrogas",
     int(f["prorrogas"].sum()) if len(f) else 0
 )
-if len(f) >= 3:
-    r = f["lluvia_total_mm"].corr(f["declaratorias"])
-    st.caption(f"📈 Correlación lluvia–declaratorias en la selección: r = {r:.2f}")
+if len(f) >= 3 and f["declaratorias"].nunique() > 1:
+      r = f["lluvia_total_mm"].corr(f["declaratorias"])
+      st.caption(f"📈 Correlación lluvia–declaratorias en la selección: r = {r:.2f}")
 if f.empty:
     st.warning("No hay datos para los filtros seleccionados.")
     st.stop()
